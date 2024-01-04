@@ -1,0 +1,58 @@
+
+div.winlose-modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+@keyframes modalMenuFadeIn {
+  0% {
+  transform-origin: top left;
+  opacity: 0;
+  transform: scale(0,0) translateX(-50%) translateY(-50%);
+  }
+  75% {
+    transform: scale(1.25,1.25) translateX(-40%) translateY(-40%);
+  }
+  100% {
+  opacity: 1;
+  transform: scale(1,1) translateX(-50%) translateY(-50%);
+  }
+}
+
+div.winlose-modal-menu {
+  display: inline-block;
+  transform-origin: top center;
+  transform: translateX(-50%) translateY(-50%);
+  animation: 3s ease-in-out modalMenuFadeIn;
+  background-color: black;
+  color: white;
+  font-size: 2.5em;
+  text-align: center;
+  line-height: 2em;
+  border-radius: 10px;
+}
+
+div.winlose-modal-menu-body {
+  background-color: white;
+  color: black;
+  padding: 1.5em;
+  font-size: 0.5em;
+  text-align: center;
+}
+
+ div.winlose-modal-menu-footer {
+  padding: 0.5em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div.winlose-modal-menu div button {
+  font-size: 0.5em;
+  border-radius: 10px;
+  background-color: white;
+}

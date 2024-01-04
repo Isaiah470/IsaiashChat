@@ -1,0 +1,208 @@
+ /*
+regular animation: 
+
+come in then come out animation: 
+start from original settings 
+fadeOut : transform: translateX(calc(0px + var(--settings-column-offset)));  (visibility; visible)
+.settings-column.contracted doesn't have width: 0px;
+.settings-column.contracted has visibility: hidden, transition width
+
+adjust 
+fadeOut : transform: translateX(calc(0px + var(--settings-column-offset))); for ending position
+
+normal slide: 
+settings-column.contracted  display: none;
+
+super normal slide:
+.settings-column.contracted: width: 200px; visibility: hidden; (no display: none;) 
+fadeOut: visibility: visible;
+
+
+original: 
+visibility: hidden, (no display: none), width: 0px, transition: width 1s on both, fadeOut is transform and opacity, plus visibility: visible
+*/
+svg path[style*="fill: rgb(25, "] {
+  fill: var(--images-color) !important; 
+  transition: fill 1.0s ease-in-out;
+}
+
+svg path[fill] {
+  /*fill: var(--images-color) !important; */
+  transition: fill 1.0s ease-in-out, filter 1.0s ease-in-out;
+  filter: hue-rotate(var(--images-hue-rotate));
+}
+.carousel-settings-items > svg  {
+  perspective: 500px;
+  transform-style: preserve-3d;
+  transition: transform 1s ease-in-out, filter 1s ease-in-out;
+}
+.carousel-settings-items > svg:hover  {
+  cursor: pointer;
+}
+.carousel-settings-items > svg[data-flipped='1']{
+  transform: rotateY( 180deg );
+  filter: hue-rotate(180deg);
+}
+.carousel-settings-items > svg[data-flipped='0']{
+  transform: rotateY( 0deg );
+}
+
+
+html {
+  overflow-x: hidden;
+  ;
+}
+:root {
+  --settings-column-offset: 0px;
+  --images-color: hsl(0,50%,50%);
+  --images-hue-rotate: 50deg;
+}
+/*div::-webkit-scrollbar{
+  display: none;
+} 
+span::-webkit-scrollbar{
+  display: none;
+}  */
+
+.settings-nav {
+  transition: width 0.5s ease-in-out;
+}
+.settings-background {
+  background-image: url('../img/blackDragon.svg');
+  background-repeat: repeat;
+  background-position: 100% 50%;
+  background-size: 50%;
+  position: static;
+}
+.settings-display-button {
+  display: none; 
+  transition: transform 1s ease-in-out;
+  transform: translateX(0px);
+}
+@media (min-width: 768px) {
+#settings-custom-slider {
+ 
+}
+}
+@keyframes hide {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  
+  0% {
+    transform: translateX(calc(-200px + var(--settings-column-offset)));
+    opacity: 0;
+    *::-webkit-scrollbar{
+      display: none;
+    } 
+  }
+  100% {
+    transform: translateX(calc(0px + var(--settings-column-offset)));
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  /*
+  0% {
+    display: block;
+  } */
+  0% {
+    visibility: visible;
+    transform: translateX(calc(0px + var(--settings-column-offset)));
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(calc(-200px + var(--settings-column-offset)));
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInDelayed {
+  0% {
+    display: block;
+    width: 0px;
+    visibility: hidden;
+    opacity: 0;
+  }
+  50% {
+    display: block;
+    visibility: visible;
+
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.hidden-settings {
+  animation: fadeInDelayed 2s ease-in-out infinite;
+  animation-timing-function: ease-in;
+  animation-direction: alternate;
+  animation-play-state: running;
+}
+
+span {
+}
+.settings-link {
+  overflow-x: scroll;
+}
+.hidden-settings-wrapper {
+  overflow-x: scroll;
+}
+
+@media (max-width: 768px) {
+  .settings-column {
+    z-index: 1;
+  }
+  .settings-display-button {
+    display: inline-block;
+  }
+  .settings-column.expanded {
+    transform: translateX(calc(0px + var(--settings-column-offset)));
+    width: 200px;
+    visibility: visible;
+    position: absolute;
+    transition: width 1s ;
+    animation: fadeIn 0.7s ease-in-out;
+    
+    & .settings-line-button {
+      animation: hide 1s;
+    }
+  }
+  .settings-column.contracted {
+    transform: translateX(calc(0px + var(--settings-column-offset)));
+
+    overflow-x: hidden;
+   /* visibility: visible;
+    display: none; */
+    width: 200px;
+    visibility: hidden;
+    position: absolute;
+    transition: width 1s;
+    opacity: 1;
+    animation: fadeOut 0.7s ease-in-out; 
+    & .settings-line-button {
+      display: none;
+    }
+    & .hidden-settings-wrapper {
+      display: none;
+    }
+    
+  }
+  .settings-column.contracted::-webkit-scrollbar{
+    display: none;
+  } 
+  & .settings-link::-webkit-scrollbar{
+    display: none;
+  } 
+  & .hidden-settings-wrapper::-webkit-scrollbar{
+    display: none;
+  } 
+}

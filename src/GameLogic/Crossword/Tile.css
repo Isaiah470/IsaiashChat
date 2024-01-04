@@ -1,0 +1,68 @@
+:root {
+  --tile-background-color: white;
+  --tile-size: 33;
+}
+.tile-wrapper {
+display: inline-block;
+background-color: var(--tile-background-color) !important;
+
+}
+.tile-wrapper:hover {
+   --tile-background-color: lightgray;
+}
+.tile-wrapper.dark {
+  background-color: #1e1e1e !important;
+  /*background-color: green !important;*/
+}
+.tile-input {
+  color: black !important;
+}
+.tile-input.dark {
+  visibility: hidden;
+} 
+.tile-input.isToggleDark {
+  pointer-events: none;
+}
+div.form-outline {
+  height: 100% !important;
+}
+label.form-label[for="controlledValue"] {
+  z-index: 1 !important;
+  left: 0px !important;
+  text-align: center !important;
+  width: 100% !important;
+  font-size: 1em;
+  color: black !important;
+  font-weight: 400;
+}
+.form-outline .form-control:focus ~ .form-label, .form-outline .form-control.active ~ .form-label {
+  transform: translateY(-0.50rem) translateY(0.1rem) scale(0.75) translateX(-0.20rem) !important;
+  transition-duration: 0.2s !important;
+  /*border-top-color: rgb(59,113,202) !important; */
+}
+input#controlledValue.form-control.tile-input {
+  padding-inline-end: 0px;
+  padding-inline-start: 0px;
+  text-align: center;
+  line-height: 1;
+  font-size: 1.0em; 
+  padding-bottom: 0em;
+  padding-top: 0.5em;
+
+}
+
+.custom-tile-menu {
+  position: absolute; 
+  display: none;
+}
+
+.custom-tile-menu ul, .custom-tile-menu li {
+   list-style: none;
+   margin: 0; 
+   padding: 0;
+   background: white;
+}
+.custom-tile-menu li:hover {
+  background-color: lightgray;
+
+}

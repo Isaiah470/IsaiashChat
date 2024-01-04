@@ -1,0 +1,9 @@
+div.gridUnmounter.mounted {
+  transition: opacity 2s ease-in-out;
+  opacity: 1;
+}
+
+div.gridUnmounter.unmounted {
+  transition: opacity 2s ease-in-out;
+  opacity: 0;
+}

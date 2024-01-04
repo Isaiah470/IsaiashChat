@@ -1,0 +1,26 @@
+div.clue {
+  display: flex;
+}
+div.clue {
+  border-radius: 0px;
+  margin: 0px 0;
+  font-size: 1em;
+}
+
+div.clue:nth-child(even) {
+  background: #eee;
+}
+div.clue div {
+  float: left;
+}
+
+div.clue div.clue-text {
+  padding: 0px;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  margin: 0px;
+  flex-grow: 1;
+  max-width: 100%;
+  overflow-x: scroll;
+  overflow-y: scroll;
+}

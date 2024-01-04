@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css?family=Lora:400,400i,700");
+* {
+  font-family: Lora, serif;
+}
+
+div.tile-2048-container {
+  background-color: #2d2a2a;
+  border: 10px solid black;
+  font-size: 16px;
+  text-align: center;  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div.tile-2048-innercontainer {
+  width: 328px;
+  border: 1px solid white;
+  background-color: grey;
+}
+
+div.tile-2048 {
+  display: inline-block;
+  /*position: absolute;*/
+  width: 80px;
+  height: 80px;
+  background-color: red;
+  border: 1px solid #ffffff;
+
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+  font-size: 2em;
+  line-height: 2.5em;
+ /* transition: all 5s;*/
+}
+
+div.tile-2048.hide {
+  background-color: transparent !important; 
+  z-index: -1;
+
+}

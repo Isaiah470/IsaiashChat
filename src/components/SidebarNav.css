@@ -1,0 +1,95 @@
+/*  @media (min-width: 768px) and (max-width: 1199.98px) { ... } 
+X-Small	None	0–576px
+Small	sm	≥576px
+Medium	md	≥768px
+Large	lg	≥992px
+Extra large	xl	≥1200px
+Extra extra large	xxl	≥1400px
+  @media (min-width: 768px) and (max-width: 1199.98px) { ... }
+
+https://www.joshwcomeau.com/animation/css-transitions/
+https://stackoverflow.com/questions/9533132/overflow-xhidden-not-working-in-chrome
+need hide button, hide right nav thing
+*/
+
+
+@media (min-width: 768px) {
+  .sidebarnavbutton {
+    display: none;
+    visibility: hidden;
+  }
+}
+@media (max-width: 768px){
+  html {
+    overflow-x: hidden;
+  }
+  body {
+    overflow-x: hidden;
+  }
+.sidebarnav {
+  visibility: visible; 
+  position: fixed;
+} 
+.sidebarnav.left {
+  transform: translateX(-50vw);
+}
+.sidebarnav.right {
+  transform: translateX(calc(100vw - 12px));
+
+}
+
+.sidebarnav.expanded {
+  z-index: 1;
+}
+.sidebarnav.contracted {
+  z-index: 0;
+  transition: z-index 0.5s 0.5s;
+
+}
+.sidebarnavinner.contracted div {
+  border: '10px solid green';
+}
+.sidebarnavinner {
+  width: 50vw;
+}
+
+.sidebarnavinner.right {
+  direction: ltr;
+}
+
+.sidebarnavinner.left.expanded, .sidebarnavbutton.left.expanded {
+  transform: translateX(50vw);
+  transition: transform 0.5s;
+}
+
+.sidebarnavinner.right.expanded, .sidebarnavbutton.right.expanded {
+  transform: translateX(-50vw);
+  transition: transform 0.5s;
+}
+
+.sidebarnavinner.contracted, .sidebarnavbutton.contracted {
+  transform: translateX(0vw);
+  transition: transform 0.5s; 
+}
+.sidebarnavinner.contracted, {
+
+}
+}
+
+@media (min-width: 768px){
+  .sidebarnav, .sidebarnavinner,  {
+    visibility: visible; 
+    position: static; 
+    transform: none;
+    z-index: 0;
+  }
+  .sidebarnavinner,  {
+    width:auto;
+  }
+}
+
+@media (min-width: 768px){
+  .sidebarnavinner {
+    transform: none;
+  }
+}

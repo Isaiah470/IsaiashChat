@@ -1,0 +1,29 @@
+main {
+  text-align: center;
+  vertical-align: center;
+  line-height: 100vh
+}
+body {
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+.divider:after,
+.divider:before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #eee;
+}
+.h-custom {
+  height: calc(100% - 73px);
+}
+@media (max-width: 450px) {
+  .h-custom {
+  height: 100%;
+  }
+}
+a {
+  color: inherit !important;
+}
+a:visited {
+  color:  #3B71CA !important;
+}
