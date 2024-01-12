@@ -71,24 +71,20 @@ need hide button, hide right nav thing
   transform: translateX(0vw);
   transition: transform 0.5s; 
 }
-.sidebarnavinner.contracted, {
-
 }
-}
-
 @media (min-width: 768px){
-  .sidebarnav, .sidebarnavinner,  {
+  .sidebarnav, .sidebarnavinner  {
     visibility: visible; 
     position: static; 
     transform: none;
     z-index: 0;
   }
-  .sidebarnavinner,  {
+  .sidebarnavinner {
     width:auto;
   }
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px) {
   .sidebarnavinner {
     transform: none;
   }
