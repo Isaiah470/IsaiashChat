@@ -20,7 +20,7 @@ import SlotsUI from './GameLogic/SlotsUI'
 import PostForm from './components/post/PostForm'
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/IsaiashChat/",
     element: <Home/>,
     errorElement: <ErrorPage />,
     children: [
@@ -53,12 +53,12 @@ const router = createBrowserRouter([
     ]
   },
   {
-    path: "/login",
+    path: "/IsaiashChat/login",
     element: <Login />,
     errorElement: <ErrorPage />,
   },
   {
-    path: "/profile",
+    path: "/IsaiashChat/profile",
     element: <Navbar />,
     errorElement: <ErrorPage />,
   },
