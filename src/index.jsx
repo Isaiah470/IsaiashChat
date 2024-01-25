@@ -20,7 +20,7 @@ import SlotsUI from './GameLogic/SlotsUI'
 import PostForm from './components/post/PostForm'
 const router = createBrowserRouter([
   {
-    path: "/IsaiashChat",
+    path: "/",
     element: <Home/>,
     errorElement: <ErrorPage />,
     children: [
@@ -53,18 +53,18 @@ const router = createBrowserRouter([
     ]
   },
   {
-    path: "/IsaiashChat/login",
+    path: "/login",
     element: <Login />,
     errorElement: <ErrorPage />,
   },
   {
-    path: "/IsaiashChat/profile",
+    path: "/profile",
     element: <Navbar />,
     errorElement: <ErrorPage />,
   },
 
   
-]);
+], {basename: "/IsaiashChat/", });
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
