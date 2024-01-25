@@ -37,11 +37,11 @@ const router = createBrowserRouter([
         element: <Grid />
       },
       {
-        path: "IBlackjack",
+        path: "Blackjack",
         element: <BlackjackUI />
       },
       {
-        path: "Game/Slots",
+        path: "Slots",
         element: <SlotsUI />
       },
       {
