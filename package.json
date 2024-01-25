@@ -1,5 +1,6 @@
 {
   "name": "react-javascript",
+  "homepage": "https://isaiah470.github.io/IsaiashChat/",
   "version": "1.0.0",
   "type": "module",
   "description": "React TypeScript on Replit, using Vite bundler",
