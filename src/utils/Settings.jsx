@@ -60,9 +60,9 @@ export default function Settings() {
       <div ref = {imagesRef} className = 'd-flex' style = {{position: 'relative' , overflowX: 'auto', 
         scrollSnapType: 'x mandatory', }} >
         <div className = 'w-100 d-flex flex-shrink-0 h-100 carousel-settings-items' style = {{scrollSnapAlign: 'center'}}> 
-          {[0,1,2,3].map((index) => {return <BlackDragon data-flipped = {flippedState[index] ? '1' : '0'} onClick = {() => {handleFlip(flippedState, index)}}/>})}
+          {[0,1,2,3].map((index) => {return <BlackDragon key = {index} data-flipped = {flippedState[index] ? '1' : '0'} onClick = {() => {handleFlip(flippedState, index)}}/>})}
             </div>
-        <div className = 'w-100 d-flex flex-shrink-0 h-100 carousel-settings-items' style = {{scrollSnapAlign: 'center'}}> {[4,5,6].map((index) => {return <StylishDragon data-flipped = {flippedState[index] ? '1' : '0'} onClick = {() => {handleFlip(flippedState, index)}}/>})}</div>
+        <div className = 'w-100 d-flex flex-shrink-0 h-100 carousel-settings-items' style = {{scrollSnapAlign: 'center'}}> {[4,5,6].map((index) => {return <StylishDragon key = {index} data-flipped = {flippedState[index] ? '1' : '0'} onClick = {() => {handleFlip(flippedState, index)}}/>})}</div>
       
       </div>
       

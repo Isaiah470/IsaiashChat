@@ -71,12 +71,15 @@ export default function Navbar() {
     <>
       <MDBNavbar expand='md' light bgColor='light' className='p-0'>
         <MDBContainer fluid className='flex-nowrap p-0'>
-          <MDBNavbarBrand href='#' className=''>
+          <MDBNavbarBrand  className=''>
+          <Link to = {'/'}>
             <MDBBtn className='mx-2 ' color="dark" floating>
               <CircledText height={15} width={4} degrees={30} text='Isaiash' fontSize={5.5} left={16.5} top={3} transformOrigin = 'bottom center'>
               </CircledText>
               <MDBIcon fas icon='dragon' color='danger'>  </MDBIcon>
             </MDBBtn>
+          </Link>
+          
           </MDBNavbarBrand>
 
 
@@ -108,6 +111,16 @@ export default function Navbar() {
                 <MDBTooltip tag='span' wrapperProps={{}} title={<p className='p-0 m-0' style={{ fontSize: '0.75em' }}> Create Post </p>}>
                   <Link to = {'create_post'}>
                   <MDBIcon fas icon='feather' />  </Link> </MDBTooltip>
+              </span>
+              
+              <span className='me-3 me-lg-3'>
+                <MDBTooltip tag='span' wrapperProps={{}} title={<p className='p-0 m-0' style={{ fontSize: '0.75em' }}>  Chat  </p>}>
+                  <Link to = {'Chat'}><MDBIcon fas icon='message' /> </Link>  </MDBTooltip>
+              </span>
+              
+              <span className='me-3 me-lg-3'>
+                <MDBTooltip tag='span' wrapperProps={{}} title={<p className='p-0 m-0' style={{ fontSize: '0.75em' }}>  Posts  </p>}>
+                  <Link to = {'Posts'}><MDBIcon fas icon='comments' /> </Link>  </MDBTooltip>
               </span>
 
               <span className='me-3 me-lg-3'>

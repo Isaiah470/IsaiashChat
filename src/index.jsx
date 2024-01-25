@@ -10,6 +10,7 @@ import './index.css';
 import App from './App';
 import Login from './pages/Login';
 import Games from './pages/Games'
+import Settings from './utils/Settings'
 import Navbar from './components/Navbar'
 import Home from './components/Home';
 import ErrorPage from './pages/ErrorPage';
@@ -18,6 +19,8 @@ import Grid from './GameLogic/Crossword/Grid'
 import BlackjackUI from './GameLogic/BlackjackUI'
 import SlotsUI from './GameLogic/SlotsUI'
 import PostForm from './components/post/PostForm'
+import ChatPage from './components/chat/ChatPage'
+import ListWrapper from './components/post/ListWrapper'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -25,9 +28,21 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
+        path: "Settings",
+        element: <Settings />,
+      },
+      {
         path: "Games",
         element: <Games />,
       }, 
+      {
+        path: "Chat",
+        element: <ChatPage initialRoomId = {1} initialChannelId = {1}/> ,
+      },
+      {
+        path: "Posts",
+        element: <ListWrapper isPost = {false} isChildren = {false} query = {{"isPost": true, spaceId: 1, startNum: 0, getNum: 1000 }} sortMeth = {'old'}/>
+      },
       {
         path: "Games/2048",
         element: <Grid2048Wrapper />

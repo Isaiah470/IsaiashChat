@@ -6,7 +6,7 @@ import PostCard from './post/PostCard'
 import ListWrapper from './post/ListWrapper'
 import PostForm from './post/PostForm'
 import NavPages from './post/NavPages'
-//import Logo from '../img/StylishDragon.svg?react';
+import Logo from '../img/StylishDragon.svg';
 import Settings from '../utils/Settings';
 import SettingsTabs from '../utils/SettingsTabs'
 import {getRoll, makeArray, getPayout} from '../GameLogic/slots'
@@ -27,20 +27,28 @@ export default function Home() {
       {/*<SlotsUI /> */} 
       <Navbar />
       <Outlet />
-      {/*<div style = {{overflow: 'auto', }}>
-      <img src={logo} alt="Logo" className = 'img-fluid'/>
-      </div>  */}
+      <div>
+        Message to Isaiah: 
+        Server is up, if it doesn't work must be school blocking it (ur right github can't
+        do server, so it is on render.com which is blocked by school)
+        you can login, register, also in the navbar there is new links to chat and posts.
+        in the dropdown there is also link to settings. 
+        All this works on dev at least, may not work on deployed. 
+      </div>
+      <div style = {{overflow: 'auto', }}>
+      <img src={Logo} alt="Logo" className = 'img-fluid'/>
+      </div>  
       {/*<Post postId={1} spaceId = {1}/>*/}
-      {/*<Settings />  */}
+      {/*<Settings /> */}  
       {/*<SettingsTabs />*/}
-      {/*<ChatPage initialRoomId = {1} initialChannelId = {1}/>   */}
+      {/* <ChatPage initialRoomId = {1} initialChannelId = {1}/>  */}
       {/*<PostForm /> */} 
       
       {/*<ListWrapper isPost={true} isChildren={true} query={{ "isPost": null, postId: 1, spaceId: 1, startNum: 0, getNum: 1000, isTree: true }} postId={1} spaceId={1} sortMeth={'bottom'} isTree={true} /> */}
       
       {/* <ListWrapper isPost={true} isChildren={true} query={{ "isPost": null, postId: 1, spaceId: 1, startNum: 0, getNum: 1000, isTree: false }} postId={1} spaceId={1} sortMeth={'bottom'} isTree={false} />*/}
       {/*<ListWrapper isPost = {false} isChildren = {false} query = {{"isPost": true, spaceId: 1, startNum: 0, getNum: 1000 }} sortMeth = {'old'}/>  */}
-      {/* <NavPages numPages = {12} currPageProp = {6}/> */}
+      {/*<NavPages numPages = {12} currPageProp = {6}/> */}
     </>
   )
 }
