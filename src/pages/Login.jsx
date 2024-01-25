@@ -125,7 +125,6 @@ export default function Login() {
         username: formValue.uname,
         password: formValue.pword,
     });
-      
     } else {
       console.log("wrong registration")
       setButton(false);

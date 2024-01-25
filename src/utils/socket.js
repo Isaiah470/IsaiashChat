@@ -1,6 +1,6 @@
 import { io } from "socket.io-client";
 import { createContext } from 'react';
-const URL = "https://socketserver.riverqiu.repl.co";
+const URL = "https://socketserver-dico.onrender.com/";
 const socket = io(URL, { autoConnect: false });
 console.log("started")
 
