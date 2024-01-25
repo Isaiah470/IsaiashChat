@@ -25,28 +25,28 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children: [
       {
-        path: "Games",
+        path: "/IsaiashChat/Games",
         element: <Games />,
       }, 
       {
-        path: "2048",
+        path: "/IsaiashChat/2048",
         element: <Grid2048Wrapper />
       },
       {
-        path: "Crossword",
+        path: "/IsaiashChat/Crossword",
         element: <Grid />
       },
       {
-        path: "Blackjack",
+        path: "/IsaiashChat/Blackjack",
         element: <BlackjackUI />
       },
       {
-        path: "Slots",
+        path: "/IsaiashChat/Slots",
         element: <SlotsUI />
       },
       {
 
-        path: "create_post",
+        path: "/IsaiashChat/create_post",
         element: <PostForm />
 
       },
