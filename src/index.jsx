@@ -20,7 +20,7 @@ import SlotsUI from './GameLogic/SlotsUI'
 import PostForm from './components/post/PostForm'
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/IsaiashChat",
     element: <Home/>,
     errorElement: <ErrorPage />,
     children: [
@@ -29,19 +29,19 @@ const router = createBrowserRouter([
         element: <Games />,
       }, 
       {
-        path: "2048",
+        path: "Games/2048",
         element: <Grid2048Wrapper />
       },
       {
-        path: "Crossword",
+        path: "Games/Crossword",
         element: <Grid />
       },
       {
-        path: "Blackjack",
+        path: "Games/Blackjack",
         element: <BlackjackUI />
       },
       {
-        path: "Slots",
+        path: "Games/Slots",
         element: <SlotsUI />
       },
       {
@@ -53,12 +53,12 @@ const router = createBrowserRouter([
     ]
   },
   {
-    path: "/login",
+    path: "/IsaiashChat/login",
     element: <Login />,
     errorElement: <ErrorPage />,
   },
   {
-    path: "/profile",
+    path: "/IsaiashChat/profile",
     element: <Navbar />,
     errorElement: <ErrorPage />,
   },

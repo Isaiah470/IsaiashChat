@@ -21,7 +21,7 @@ export default function Games() {
       <MDBIcon fas icon="gamepad" > </MDBIcon>
     </h1>
     <div className = 'd-flex justify-content-center flex-wrap'> 
-      <Link to = {`/2048`} >
+      <Link to = {`2048`} >
       <MDBCard alignment='center'>
         <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
           <MDBCardImage src='/src/img/2048.png' fluid alt='...' style = {{maxWidth: '200px'}}/>
@@ -33,7 +33,7 @@ export default function Games() {
         </MDBCardBody>
       </MDBCard>
     </Link>
-      <Link to = {`/Crossword`} >
+      <Link to = {`Crossword`} >
       <MDBCard alignment='center'>
         <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
           <MDBCardImage src='/src/img/crossword.png' fluid alt='...' style = {{maxWidth: '200px'}}/>
@@ -47,7 +47,7 @@ export default function Games() {
         </MDBCardBody>
       </MDBCard>
       </Link>
-      <Link to = {`/Blackjack`} >
+      <Link to = {`Blackjack`} >
       <MDBCard alignment='center'>
         <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
           <MDBCardImage src='/src/img/blackjack.jpg' fluid alt='...' style = {{maxWidth: '200px'}}/>
@@ -61,7 +61,7 @@ export default function Games() {
         </MDBCardBody>
       </MDBCard>
       </Link>
-      <Link to = {`/Slots`} >
+      <Link to = {`Slots`} >
       <MDBCard alignment='center'>
         <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
           <MDBCardImage src='/src/img/slots.jpeg' fluid alt='...' style = {{maxWidth: '200px'}}/>
