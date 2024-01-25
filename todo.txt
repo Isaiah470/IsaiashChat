@@ -1,0 +1,4 @@
+how to fix vite random stuff: need to set up actions workflow https://vitejs.dev/guide/static-deploy#github-pages
+guide to get images: https://vitejs.dev/guide/assets
+must add comments, posts, view, and settings
+change scrollbar style
