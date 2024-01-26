@@ -24,7 +24,7 @@ export default function Games() {
       <Link to = {`2048`} >
       <MDBCard alignment='center'>
         <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
-          <MDBCardImage src='/src/img/2048.png' fluid alt='...' style = {{maxWidth: '200px'}}/>
+          <MDBCardImage src='/IsaiashChat/src/img/2048.png' fluid alt='...' style = {{maxWidth: '200px'}}/>
             <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
         </MDBRipple>
         <MDBCardBody>
@@ -36,7 +36,7 @@ export default function Games() {
       <Link to = {`Crossword`} >
       <MDBCard alignment='center'>
         <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
-          <MDBCardImage src='/src/img/crossword.png' fluid alt='...' style = {{maxWidth: '200px'}}/>
+          <MDBCardImage src='/IsaiashChat/src/img/crossword.png' fluid alt='...' style = {{maxWidth: '200px'}}/>
       
             <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
     
@@ -50,7 +50,7 @@ export default function Games() {
       <Link to = {`Blackjack`} >
       <MDBCard alignment='center'>
         <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
-          <MDBCardImage src='/src/img/blackjack.jpg' fluid alt='...' style = {{maxWidth: '200px'}}/>
+          <MDBCardImage src='/IsaiashChat/src/img/blackjack.jpg' fluid alt='...' style = {{maxWidth: '200px'}}/>
 
             <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
    
@@ -64,7 +64,7 @@ export default function Games() {
       <Link to = {`Slots`} >
       <MDBCard alignment='center'>
         <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
-          <MDBCardImage src='/src/img/slots.jpeg' fluid alt='...' style = {{maxWidth: '200px'}}/>
+          <MDBCardImage src='/IsaiashChat/src/img/slots.jpeg' fluid alt='...' style = {{maxWidth: '200px'}}/>
             <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
         </MDBRipple>
         <MDBCardBody>

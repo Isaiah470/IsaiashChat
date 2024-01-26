@@ -91,7 +91,7 @@ export default function BlackjackUI() {
           currDealerCards.map((card, index) => {
             const cardStr = cardIntToStr(card);
             return (
-              currTurn === "dealer" || index === 0 ? <img key = {index} style = {{height: '100%'}} src={`/cards/${cardStr}.svg`} /> : <img key = {index} style = {{height: '100%'}} src={`/cards/RED_BACK.svg`}/>
+              currTurn === "dealer" || index === 0 ? <img key = {index} style = {{height: '100%'}} src={`/IsaiashChat/cards/${cardStr}.svg`} /> : <img key = {index} style = {{height: '100%'}} src={`/IsaiashChat/cards/RED_BACK.svg`}/>
               )
           })
         }
@@ -103,7 +103,7 @@ export default function BlackjackUI() {
           currUserCards.map((card, index) => {
             const cardStr = cardIntToStr(card);
             return (
-              <img key = {index} style = {{height: '100%'}} src={`/cards/${cardStr}.svg`} />
+              <img key = {index} style = {{height: '100%'}} src={`/IsaiashChat/cards/${cardStr}.svg`} />
               )
           })
         }
