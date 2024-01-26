@@ -7,6 +7,10 @@ import {
   MDBCardTitle,
   MDBIcon,
 } from 'mdb-react-ui-kit';
+import crosswordImg from "/src/assets/crossword.png";
+import twoImg from "/src/assets/2048.png";
+import slotsImg from "/src/assets/slots.jpeg";
+import blackjackImg from "/src/assets/blackjack.jpg";
 import { Outlet, Link } from "react-router-dom";
 
 export default function Games() {
@@ -24,7 +28,7 @@ export default function Games() {
       <Link to = {`2048`} >
       <MDBCard alignment='center'>
         <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
-          <MDBCardImage src='/IsaiashChat/src/img/2048.png' fluid alt='...' style = {{maxWidth: '200px'}}/>
+          <MDBCardImage src={twoImg} fluid alt='...' style = {{maxWidth: '200px'}}/>
             <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
         </MDBRipple>
         <MDBCardBody>
@@ -36,7 +40,7 @@ export default function Games() {
       <Link to = {`Crossword`} >
       <MDBCard alignment='center'>
         <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
-          <MDBCardImage src='/IsaiashChat/src/img/crossword.png' fluid alt='...' style = {{maxWidth: '200px'}}/>
+          <MDBCardImage src={crosswordImg} fluid alt='...' style = {{maxWidth: '200px'}}/>
       
             <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
     
@@ -50,7 +54,7 @@ export default function Games() {
       <Link to = {`Blackjack`} >
       <MDBCard alignment='center'>
         <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
-          <MDBCardImage src='/IsaiashChat/src/img/blackjack.jpg' fluid alt='...' style = {{maxWidth: '200px'}}/>
+          <MDBCardImage src={blackjackImg} fluid alt='...' style = {{maxWidth: '200px'}}/>
 
             <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
    
@@ -64,7 +68,7 @@ export default function Games() {
       <Link to = {`Slots`} >
       <MDBCard alignment='center'>
         <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
-          <MDBCardImage src='/IsaiashChat/src/img/slots.jpeg' fluid alt='...' style = {{maxWidth: '200px'}}/>
+          <MDBCardImage src={slotsImg} fluid alt='...' style = {{maxWidth: '200px'}}/>
             <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
         </MDBRipple>
         <MDBCardBody>
