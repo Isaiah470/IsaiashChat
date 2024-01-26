@@ -69,7 +69,7 @@ export default function ListWrapper({ isPost, isChildren, query, sortMeth, isTre
       socket.off('user.post.comment', postedComment);
       socket.off('user.get.tree.comments', onTreeComments);
     };
-  }, [])
+  }, [sortMethod])
   const treeify = useCallback((comments, rootId, isChildren) => {
     const treeComments = {};
     treeComments[rootId] = [];
@@ -104,7 +104,7 @@ export default function ListWrapper({ isPost, isChildren, query, sortMeth, isTre
     <>
       <ListContext.Provider value={{ setComments, childComments, roots, rootComments, treeComments, givenCommentTree, setGivenCommentTree, setSubtree, subtreeParent, sortMethod, setSortMethod, isChildren, isPost, }}>
         <DropdownSort />
-        <CommentForm spaceId={query.spaceId} parentId={query.postId} postId={query.postId} />
+        <CommentForm spaceId={query.spaceId} parentId={query.postId} postId={query.postId} isPost />
         {roots !== null && roots?.length > 0 && (
           <>
             <CardsList cards={roots} isPost={query.isPost} isRoot = {true}/>

@@ -10,8 +10,9 @@ import {
   MDBNavbarNav,
   MDBIcon,
 } from 'mdb-react-ui-kit';
-import { Link } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 export default function ProfileDropdown() {
+  const navigate = useNavigate();
   //0 is text, 1 is icon, 2 is link
   const dropdownItems = [['Profile', 'circle-user', '#'],
   ['Settings', 'cog', 'Settings',], ['Bugs/Suggestions', 'bug', '#'],
@@ -38,11 +39,9 @@ export default function ProfileDropdown() {
 
             {dropdownItems.map((item) => {
               return (
-                <MDBDropdownItem link className='text-nowrap' key={item[0]}>
-                  <Link to = {item[2]} >
+                <MDBDropdownItem link onClick = {() => navigate(`${item[2]}`)} className='text-nowrap' key={item[0]}>
                   <MDBIcon fas icon={item[1]} className='me-4' />
                   {item[0]}
-                  </Link>
                 </MDBDropdownItem>
               )
             })}
@@ -56,10 +55,8 @@ export default function ProfileDropdown() {
       {dropdownItems.map((item) => {
         return (
           <MDBNavbarItem className='d-md-none ms-4' key={item[0]}>
-            <MDBNavbarLink className='text-nowrap '>
-              <Link to ={item[2]}>
+            <MDBNavbarLink className='text-nowrap ' onClick = {() => navigate(`${item[2]}`)}>
               <MDBIcon fas icon={item[1]} className='me-4' /> {item[0]}
-              </Link>
             </MDBNavbarLink>
           </MDBNavbarItem>
         )

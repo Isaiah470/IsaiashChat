@@ -86,6 +86,7 @@ export default function PostCard({ message, content, spaceId, parentId, postId, 
               </div>
             </MDBCardHeader>
             <MDBCardText className="ps-2">
+              
               {content}
             </MDBCardText>
             <MDBCardFooter tag="h6" className="mt-1 mb-1 ps-0 pt-0 pb-1">

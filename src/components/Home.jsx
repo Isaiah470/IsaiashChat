@@ -34,6 +34,7 @@ export default function Home() {
         you can login, register, also in the navbar there is new links to chat and posts.
         in the dropdown there is also link to settings. 
         All this works on dev at least, may not work on deployed. 
+        some links may need you click a few times, also stuff may look bad depending on your browser
       </div>
       <div style = {{overflow: 'auto', }}>
       <img src={Logo} alt="Logo" className = 'img-fluid'/>

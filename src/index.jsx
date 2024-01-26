@@ -44,6 +44,10 @@ const router = createBrowserRouter([
         element: <ListWrapper isPost = {false} isChildren = {false} query = {{"isPost": true, spaceId: 1, startNum: 0, getNum: 1000 }} sortMeth = {'old'}/>
       },
       {
+        path: "Comments", 
+        element: <ListWrapper isPost={true} isChildren={true} query={{ "isPost": null, postId: 1, spaceId: 1, startNum: 0, getNum: 1000, isTree: true }} postId={1} spaceId={1} sortMeth={'bottom'} isTree={true} /> 
+      },
+      {
         path: "Games/2048",
         element: <Grid2048Wrapper />
       },
@@ -88,3 +92,10 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </App>
   </React.StrictMode>
 )
+/*
+how to fix vite random stuff: need to set up actions workflow https://vitejs.dev/guide/static-deploy#github-pages
+guide to get images: https://vitejs.dev/guide/assets
+must add comments, posts, view, and settings
+change scrollbar style
+
+*/

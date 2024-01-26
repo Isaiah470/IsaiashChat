@@ -20,9 +20,10 @@ import {
 } from 'mdb-react-ui-kit';
 import CircledText from '../utils/CircledText'
 import ProfileDropdown from './ProfileDropdown'
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 //inspirational: https://mdbootstrap.com/snippets/jquery/marta-szymanska/1818927#
 export default function Navbar() {
+  const navigate = useNavigate()
   const [showNavNoTogglerThird, setShowNavNoTogglerThird] = useState(false);
 
   const ref = useRef(null);
@@ -71,15 +72,12 @@ export default function Navbar() {
     <>
       <MDBNavbar expand='md' light bgColor='light' className='p-0'>
         <MDBContainer fluid className='flex-nowrap p-0'>
-          <MDBNavbarBrand  className=''>
-          <Link to = {'/'}>
+          <MDBNavbarBrand  className=''  onClick = {() => navigate(`/`)}>
             <MDBBtn className='mx-2 ' color="dark" floating>
               <CircledText height={15} width={4} degrees={30} text='Isaiash' fontSize={5.5} left={16.5} top={3} transformOrigin = 'bottom center'>
               </CircledText>
               <MDBIcon fas icon='dragon' color='danger'>  </MDBIcon>
             </MDBBtn>
-          </Link>
-          
           </MDBNavbarBrand>
 
 
