@@ -76,7 +76,7 @@ export default function ListWrapper({ isPost, isChildren, query, sortMeth, isTre
       socket.off('user.post.comment', postedComment);
       socket.off('user.get.tree.comments', onTreeComments);
     };
-  }, [sortMethod])
+  }, [ , sortMethod])
   const treeify = useCallback((comments, rootId, isChildren) => {
     const treeComments = {};
     treeComments[rootId] = [];
