@@ -16,6 +16,7 @@ import {
   MDBBadge,
   MDBCollapse
 } from 'mdb-react-ui-kit';
+import {Link} from 'react-router-dom'
 //  <PostContext.Provider value = {{comments, childComments, "roots": roots, rootComments}}> comments is all comments, childComments function get array of children, roots is function that returns key value pairs of commentId and array of children, rootComments is array of root comments.
 //  const newComment = {content, spaceId, parentId, postId, username, "commentId": commentId.COUNT};
 
@@ -86,8 +87,9 @@ export default function PostCard({ message, content, spaceId, parentId, postId, 
               </div>
             </MDBCardHeader>
             <MDBCardText className="ps-2">
-              
+              <Link to= '/Comments'>
               {content}
+              </Link>
             </MDBCardText>
             <MDBCardFooter tag="h6" className="mt-1 mb-1 ps-0 pt-0 pb-1">
               <div className="d-flex align-items-center mt-1">

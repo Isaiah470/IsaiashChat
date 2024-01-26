@@ -104,7 +104,7 @@ export default function ListWrapper({ isPost, isChildren, query, sortMeth, isTre
     <>
       <ListContext.Provider value={{ setComments, childComments, roots, rootComments, treeComments, givenCommentTree, setGivenCommentTree, setSubtree, subtreeParent, sortMethod, setSortMethod, isChildren, isPost, }}>
         <DropdownSort />
-        <CommentForm spaceId={query.spaceId} parentId={query.postId} postId={query.postId} isPost />
+        <CommentForm spaceId={query.spaceId} parentId={query.postId} postId={query.postId} isPost = {isPost} />
         {roots !== null && roots?.length > 0 && (
           <>
             <CardsList cards={roots} isPost={query.isPost} isRoot = {true}/>

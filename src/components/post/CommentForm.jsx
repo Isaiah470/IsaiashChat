@@ -20,11 +20,11 @@ export default function CommentForm({ autoFocus = false, spaceId, postId, parent
 
   return (
     <div className='small'>
-    <MDBTextArea autoFocus={autoFocus} value={text} onChange={(e) => setText(e.target.value)} style={{ padding: '10px', borderRadius: '5px', fontSize: '14px' }} rows={3} label={isPost ? 'Post' : 'Comment'} className="mt-2 small" >
+    <MDBTextArea autoFocus={autoFocus} value={text} onChange={(e) => setText(e.target.value)} style={{ padding: '10px', borderRadius: '5px', fontSize: '14px' }} rows={3} label={isPost ? 'Comment' : 'Post'} className="mt-2 small" >
       </MDBTextArea>
       <div className="d-flex justify-content-end">
         <MDBBtn type="submit" disabled={loading} onClick={sendComment} className='mb-4 '>
-          {loading ? "Submitting" : isPost ? "Post" : "Comment"}
+          {loading ? "Submitting" : isPost ? "Comment" : "Post"}
         </MDBBtn >
       </div>
     </div>

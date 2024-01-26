@@ -25,27 +25,31 @@ export default function Home() {
 
       {/*<BlackjackUI /> */}
       {/*<SlotsUI /> */} 
+      <div style = {{overflow: 'auto', top: '0', left: '0', position: 'fixed', width: '100vw', 
+      height: '100vh', opacity: '0.1', userSelect: 'none'}}>
+      <img src={Logo} alt="Logo" className = 'img-fluid'/>
+      </div>  
       <Navbar />
       <Outlet />
       <div>
         Message to Isaiah: 
-        Server is up, if it doesn't work must be school blocking it (ur right github can't
-        do server, so it is on render.com which is blocked by school)
-        you can login, register, also in the navbar there is new links to chat and posts.
-        in the dropdown there is also link to settings. 
-        All this works on dev at least, may not work on deployed. 
-        some links may need you click a few times, also stuff may look bad depending on your browser
+        Server is up, ur right github can't do server, so it is on render.com which is blocked by school.
+        login, register work, in the navbar there is new links to chat and posts.
+        In the dropdown there is also link to settings. 
+        Works on dev at least, may not work on deployed. 
+        also the reload issue is partially solved. reload will work (because it gets cached), but if you type
+        in url directly it will give 404.
+        https://vitejs.dev/guide/static-deploy#github-pages if you do this it might solve
+        the url issue but that is not very important 
       </div>
-      <div style = {{overflow: 'auto', }}>
-      <img src={Logo} alt="Logo" className = 'img-fluid'/>
-      </div>  
+      
       {/*<Post postId={1} spaceId = {1}/>*/}
-      {/*<Settings /> */}  
+      {/*<Settings /> */} 
       {/*<SettingsTabs />*/}
       {/* <ChatPage initialRoomId = {1} initialChannelId = {1}/>  */}
       {/*<PostForm /> */} 
       
-      {/*<ListWrapper isPost={true} isChildren={true} query={{ "isPost": null, postId: 1, spaceId: 1, startNum: 0, getNum: 1000, isTree: true }} postId={1} spaceId={1} sortMeth={'bottom'} isTree={true} /> */}
+     {/* <ListWrapper isPost={true} isChildren={true} query={{ "isPost": null, postId: 1, spaceId: 1, startNum: 0, getNum: 1000, isTree: true }} postId={1} spaceId={1} sortMeth={'bottom'} isTree={true} /> */}
       
       {/* <ListWrapper isPost={true} isChildren={true} query={{ "isPost": null, postId: 1, spaceId: 1, startNum: 0, getNum: 1000, isTree: false }} postId={1} spaceId={1} sortMeth={'bottom'} isTree={false} />*/}
       {/*<ListWrapper isPost = {false} isChildren = {false} query = {{"isPost": true, spaceId: 1, startNum: 0, getNum: 1000 }} sortMeth = {'old'}/>  */}
