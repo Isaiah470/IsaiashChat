@@ -87,7 +87,7 @@ export default function PostCard({ message, content, spaceId, parentId, postId, 
               </div>
             </MDBCardHeader>
             <MDBCardText className="ps-2">
-              <Link to= '/Comments'>
+              <Link to= {'/Post/' + postId}>
               {content}
               </Link>
             </MDBCardText>

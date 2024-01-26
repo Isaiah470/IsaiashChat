@@ -5,6 +5,7 @@ import CardsList from './CardsList'
 import DropdownSort from './DropdownSort'
 import NavPages from './NavPages'
 export const ListContext = createContext(null);
+import {useParams} from 'react-router-dom'
 
 // either under comment section, with replies, or card list.
 // under comment section: have child comments, by sort method. 
@@ -23,6 +24,12 @@ export default function ListWrapper({ isPost, isChildren, query, sortMeth, isTre
   const [sortMethod, setSortMethod] = useState(sortMeth);
   const [totalNumComments, setTotalNumComments] = useState(0);
   const rootId = isPost ? query.postId : null;
+
+  let params = useParams();
+  if (params?.id) {
+    query = {...query, postId: parseInt(params.id)}
+  }
+  //console.log(params.id);
   //console.log(rootId)
   //console.log("given comment tree")
   //console.log(givenCommentTree)
@@ -62,7 +69,7 @@ export default function ListWrapper({ isPost, isChildren, query, sortMeth, isTre
     socket.on('user.get.comments', onComments);
     socket.on('user.post.comment', postedComment);
     socket.on('user.get.tree.comments', onTreeComments);
-    
+    console.log(query)
     socket.emit('getPost', { query, sortMethod });
     return () => {
       socket.off('user.get.comments', onComments);
